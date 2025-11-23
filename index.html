@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gesso Decoracompany | Acabamentos de Alto Padrão</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -27,7 +27,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif; /* Fonte moderna */
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
@@ -41,8 +41,8 @@
 
         /* --- 2. HEADER MODERNO --- */
         header {
-            background-color: rgba(255, 255, 255, 0.95); /* Levemente transparente */
-            backdrop-filter: blur(10px); /* Efeito de vidro */
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             position: fixed;
             width: 100%;
@@ -63,12 +63,53 @@
             padding: 0 5%;
         }
 
-        /* CORREÇÃO DA LOGO AQUI */
+        /* --- ESTILOS DO LOGO E TEXTO (NOVO) --- */
+        
+        /* Container que segura a imagem e o texto juntos */
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Espaço entre a imagem da logo e o texto */
+        }
+
         .logo {
-            height: 55px; /* Tamanho controlado */
+            height: 65px; /* Ajustado para equilibrar com o texto */
             width: auto;
             object-fit: contain;
         }
+
+        /* Bloco que empilha o nome e o slogan */
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Estilo do nome "Decora Company" */
+        .brand-name {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--azul-escuro);
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        /* Estilo do slogan "Acabamentos de Alto Padrão" */
+        .brand-slogan {
+            font-size: 0.8rem;
+            color: var(--azul-brand);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Ajuste para telas menores (celulares) */
+        @media (max-width: 480px) {
+            .logo { height: 50px; }
+            .brand-name { font-size: 1rem; }
+            .brand-slogan { font-size: 0.7rem; }
+        }
+        /* --- FIM DOS ESTILOS DO LOGO --- */
 
         .nav-links {
             display: flex;
@@ -91,7 +132,7 @@
             background-color: var(--azul-brand);
             color: var(--branco) !important;
             padding: 12px 25px;
-            border-radius: 50px; /* Botão arredondado moderno */
+            border-radius: 50px;
             font-weight: 600;
             box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
             transition: transform 0.3s, background-color 0.3s;
@@ -105,11 +146,10 @@
         /* --- 3. HERO SECTION (Impacto) --- */
         .hero {
             height: 100vh;
-            /* Degradê escuro sobre a imagem para o texto brilhar */
-            background: linear-gradient(135deg, rgba(0,20,50,0.9), rgba(0,74,173,0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000');
+            background: linear-gradient(135deg, rgba(0,20,50,0.9), rgba(0,74,173,0.7)), url(https://i.pinimg.com/736x/e2/71/c3/e271c3d5e91204c5645ef4dafc2f6be5.jpg);
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Efeito Parallax */
+            background-attachment: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -187,7 +227,7 @@
         }
 
         .card:hover {
-            transform: translateY(-10px); /* Flutua ao passar o mouse */
+            transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
@@ -206,7 +246,6 @@
             z-index: 1;
         }
 
-        /* Detalhe decorativo no card */
         .card::before {
             content: '';
             position: absolute;
@@ -237,16 +276,25 @@
             overflow: hidden;
             box-shadow: var(--sombra-premium);
             transition: transform 0.3s;
-            background: #000; /* Fundo preto pra vídeo ficar bonito */
+            background: #000;
         }
 
         .midia-item:hover { transform: scale(1.02); }
 
-        .midia-item video, .midia-item img {
+        .midia-item video, .midia-item img { 
             width: 100%;
             height: 250px;
             object-fit: cover;
             display: block;
+        }
+
+        /* Classe para ativar o cursor de clique nas imagens */
+        .img-galeria {
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .img-galeria:hover {
+            opacity: 0.8;
         }
 
         .midia-info {
@@ -303,7 +351,7 @@
         .btn-whatsapp-footer {
             display: inline-flex;
             align-items: center;
-            background-color: #25D366; /* Verde Whatsapp */
+            background-color: #25D366;
             color: white;
             padding: 12px 30px;
             border-radius: 50px;
@@ -329,9 +377,73 @@
         /* --- RESPONSIVO --- */
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2.2rem; }
-            .nav-links { display: none; } /* Menu simplificado no mobile */
+            .nav-links { display: none; }
             .navbar { justify-content: center; }
             .section-padding { padding: 4rem 5%; }
+        }
+
+        /* --- CSS DO MODAL --- */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            padding-top: 50px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.9); 
+        }
+
+        .modal-conteudo {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+            animation: zoom 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+
+        .fechar {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        .fechar:hover, .fechar:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #legenda {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        @media only screen and (max-width: 700px){
+            .modal-conteudo { width: 100%; }
         }
     </style>
 </head>
@@ -339,7 +451,13 @@
 
     <header>
         <nav class="navbar">
-            <img src="img/videos/logogesso.png" alt="Gesso Decoracompany" class="logo">
+            <div class="brand-container">
+                <img src="img/videos/logogesso.png" alt="Gesso Decoracompany" class="logo">
+                <div class="brand-text">
+                    <span class="brand-name">Decora Company</span>
+                    <span class="brand-slogan">Acabamentos de Alto Padrão</span>
+                </div>
+            </div>
             
             <div class="nav-links">
                 <a href="#home">Início</a>
@@ -429,6 +547,12 @@
 
     </section>
 
+    <div id="meuModal" class="modal">
+        <span class="fechar">&times;</span>
+        <img class="modal-conteudo" id="imgExpandida">
+        <div id="legenda"></div>
+    </div>
+
     <footer id="contato">
         <div class="footer-content">
             <h3>Gesso Decoracompany</h3>
@@ -454,23 +578,48 @@
         const containerFotos = document.getElementById('galeria-fotos');
         const totalFotos = 20; // Ajuste conforme suas fotos
 
+        // Variáveis do Modal
+        const modal = document.getElementById("meuModal");
+        const modalImg = document.getElementById("imgExpandida");
+        const captionText = document.getElementById("legenda");
+        const span = document.getElementsByClassName("fechar")[0];
+
         for (let i = 1; i <= totalFotos; i++) {
             const divItem = document.createElement('div');
-            divItem.className = 'midia-item'; // Usa a mesma classe bonita dos vídeos
+            divItem.className = 'midia-item';
 
             const img = document.createElement('img');
             let numeroFormatado = i.toString().padStart(2, '0');
-            img.src = `img/videos/img${numeroFormatado}.jpeg`; // Extensão corrigida
+            img.src = `img/videos/img${numeroFormatado}.jpeg`;
             img.alt = `Trabalho Gesso Decoracompany ${i}`;
-            img.loading = "lazy"; 
+            img.loading = "lazy";
+            img.className = 'img-galeria'; // Adiciona classe para estilo
+
+            // Evento de clique para abrir o modal
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
             
-            // Tratamento de erro
             img.onerror = function() {
                 divItem.style.display = 'none';
             };
 
             divItem.appendChild(img);
             containerFotos.appendChild(divItem);
+        }
+
+        // Função para fechar o modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // Fechar clicando fora da imagem
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
         }
 
         // Script de Rolagem Suave
