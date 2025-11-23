@@ -48,12 +48,15 @@
             margin: 0 auto;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--azul-primario);
-            text-transform: uppercase;
-        }
+       .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--azul-primario);
+    text-transform: uppercase;
+    
+    /* Adicione isso: */
+    line-height: 1.5; /* Dá mais espaço vertical para as letras */
+}
 
         .nav-links a {
             margin-left: 20px;
@@ -99,6 +102,8 @@
             font-size: 1.2rem;
             margin-bottom: 2rem;
         }
+
+        sc
 
         /* --- SERVIÇOS --- */
         .servicos {
@@ -146,6 +151,8 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 15px;
         }
+
+        
         
         .foto-placeholder {
             background-color: #ddd;
@@ -191,7 +198,7 @@
 
     <header>
         <nav class="navbar">
-            <div class="logo">Gesso Decoracompany</div>
+            <img src="img/videos/logogesso.png" alt="Gesso Decoracompany" class="logo">
             <div class="nav-links">
                 <a href="#home">Início</a>
                 <a href="#servicos">Serviços</a>
@@ -237,8 +244,9 @@
 
     <section id="galeria" class="galeria">
         <h2>Veja Nossos Projetos Reais</h2>
+        
+        <h3 style="margin-bottom: 20px; color: #555;">Vídeos</h3>
         <div class="galeria-grid">
-            
             <div class="card" style="padding: 10px;">
                 <video controls style="width: 100%; border-radius: 8px;">
                     <source src="img/videos/acabamento-teto.mp4" type="video/mp4">
@@ -262,8 +270,11 @@
                 </video>
                 <h3 style="font-size: 1rem; margin-top: 10px;">Detalhes em Gesso</h3>
             </div>
-
         </div>
+
+        <h3 style="margin-top: 40px; margin-bottom: 20px; color: #555;">Fotos dos Serviços</h3>
+        <div class="galeria-grid" id="galeria-fotos"></div>
+
     </section>
 
     <footer id="contato">
@@ -281,6 +292,39 @@
         <br>
         <p style="font-size: 0.8rem; opacity: 0.7;">Desenvolvido por Diego Batista</p>
     </footer>
+
+    <script>
+        const containerFotos = document.getElementById('galeria-fotos');
+        // Defina aqui até qual número vai (ex: img19)
+        const totalFotos = 20; 
+
+        for (let i = 1; i <= totalFotos; i++) {
+            const img = document.createElement('img');
+            
+            // Formata para ter dois dígitos (01, 02... 10, 11)
+            let numeroFormatado = i.toString().padStart(2, '0');
+
+            // Caminho da pasta conforme seu print
+            img.src = `img/videos/img${numeroFormatado}.jpeg`; 
+            
+            img.alt = `Trabalho Gesso Decoracompany ${i}`;
+            img.loading = "lazy"; 
+            
+            // Estilo para ficar bonitão no grid
+            img.style.width = "100%";
+            img.style.height = "250px";
+            img.style.objectFit = "cover";
+            img.style.borderRadius = "8px";
+            img.style.boxShadow = "0 4px 6px rgba(0,0,0,0.1)";
+
+            // Se der erro (foto não existir), esconde
+            img.onerror = function() {
+                this.style.display = 'none';
+            };
+
+            containerFotos.appendChild(img);
+        }
+    </script>
 
     <script>
         // Script simples para rolagem suave ao clicar nos links
