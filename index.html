@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesso Decoracompany | Acabamentos de Alto Padrão</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. VARIÁVEIS E RESET (A Base do Design) --- */
+        :root {
+            --azul-brand: #004aad;
+            --azul-escuro: #002d6b;
+            --vermelho-brand: #e63946;
+            --cinza-fundo: #f8f9fa;
+            --texto-principal: #333333;
+            --texto-suave: #666666;
+            --branco: #ffffff;
+            --sombra-premium: 0 10px 30px rgba(0,0,0,0.08);
+            --borda-suave: 1px solid rgba(0,0,0,0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif; /* Fonte moderna */
+        }
+
+        body {
+            background-color: var(--cinza-fundo);
+            color: var(--texto-principal);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; }
+        ul { list-style: none; }
+
+        /* --- 2. HEADER MODERNO --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.95); /* Levemente transparente */
+            backdrop-filter: blur(10px); /* Efeito de vidro */
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* CORREÇÃO DA LOGO AQUI */
+        .logo {
+            height: 55px; /* Tamanho controlado */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--texto-principal);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--azul-brand);
+        }
+
+        .btn-orcamento {
+            background-color: var(--azul-brand);
+            color: var(--branco) !important;
+            padding: 12px 25px;
+            border-radius: 50px; /* Botão arredondado moderno */
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn-orcamento:hover {
+            background-color: var(--azul-escuro);
+            transform: translateY(-2px);
+        }
+
+        /* --- 3. HERO SECTION (Impacto) --- */
+        .hero {
+            height: 100vh;
+            /* Degradê escuro sobre a imagem para o texto brilhar */
+            background: linear-gradient(135deg, rgba(0,20,50,0.9), rgba(0,74,173,0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Efeito Parallax */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--branco);
+            padding: 0 20px;
+            margin-top: 0;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--vermelho-brand);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(230, 57, 70, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #c92a37;
+            transform: scale(1.05);
+        }
+
+        /* --- 4. SERVIÇOS (Cards Premium) --- */
+        .section-padding { padding: 6rem 5%; }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            color: var(--azul-brand);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .section-title p { color: var(--texto-suave); }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--branco);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: var(--borda-suave);
+            box-shadow: var(--sombra-premium);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* Flutua ao passar o mouse */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .card h3 {
+            color: var(--azul-escuro);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card p {
+            color: var(--texto-suave);
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Detalhe decorativo no card */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--azul-brand);
+            opacity: 0.5;
+            transition: 0.3s;
+        }
+
+        .card:hover::before { opacity: 1; width: 6px; }
+
+        /* --- 5. GALERIA --- */
+        .galeria-bg { background-color: var(--branco); }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .midia-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--sombra-premium);
+            transition: transform 0.3s;
+            background: #000; /* Fundo preto pra vídeo ficar bonito */
+        }
+
+        .midia-item:hover { transform: scale(1.02); }
+
+        .midia-item video, .midia-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .midia-info {
+            background: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .midia-info h3 {
+            font-size: 1rem;
+            color: var(--texto-principal);
+        }
+
+        .divisor-secao {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 3rem 0;
+            color: var(--azul-brand);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+        
+        .divisor-secao::before, .divisor-secao::after {
+            content: "";
+            height: 1px;
+            width: 50px;
+            background: var(--azul-brand);
+            margin: 0 15px;
+            opacity: 0.5;
+        }
+
+        /* --- 6. FOOTER --- */
+        footer {
+            background-color: var(--azul-escuro);
+            color: white;
+            padding: 4rem 5% 2rem;
+            text-align: center;
+        }
+
+        .footer-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--branco);
+        }
+
+        .footer-info p {
+            margin-bottom: 10px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .btn-whatsapp-footer {
+            display: inline-flex;
+            align-items: center;
+            background-color: #25D366; /* Verde Whatsapp */
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp-footer:hover {
+            background-color: #20bd5a;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* --- RESPONSIVO --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .nav-links { display: none; } /* Menu simplificado no mobile */
+            .navbar { justify-content: center; }
+            .section-padding { padding: 4rem 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <img src="img/videos/logogesso.png" alt="Gesso Decoracompany" class="logo">
+            
+            <div class="nav-links">
+                <a href="#home">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#galeria">Projetos</a>
+                <a href="#contato" class="btn-orcamento">Pedir Orçamento</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transforme seu Ambiente<br>com Sofisticação</h1>
+            <p>Especialistas em Drywall, Gesso 3D e Acabamentos de Alto Padrão em Teixeira de Freitas e região.</p>
+            <a href="https://wa.me/5573998561422" target="_blank" class="cta-button">
+                Solicitar Orçamento Grátis
+            </a>
+        </div>
+    </section>
+
+    <section id="servicos" class="section-padding">
+        <div class="section-title">
+            <h2>Excelência em Cada Detalhe</h2>
+            <p>Conheça nossas especialidades e eleve o nível da sua obra</p>
+        </div>
+        
+        <div class="cards-container">
+            <div class="card">
+                <h3>Decoração em Gesso</h3>
+                <p>Sancas iluminadas, molduras clássicas e design de interiores moderno para valorizar sua sala ou quarto.</p>
+            </div>
+            <div class="card">
+                <h3>Parede Drywall</h3>
+                <p>Soluções rápidas, limpas e com isolamento acústico para dividir ambientes com inteligência.</p>
+            </div>
+            <div class="card">
+                <h3>Forro Acartonado</h3>
+                <p>O acabamento liso perfeito. Ideal para projetos de iluminação embutida e ambientes climatizados.</p>
+            </div>
+            <div class="card">
+                <h3>Divisórias Naval</h3>
+                <p>Praticidade e durabilidade para escritórios, clínicas e ambientes comerciais.</p>
+            </div>
+            <div class="card">
+                <h3>Forro PVC & Mineral</h3>
+                <p>Opções econômicas, funcionais e de fácil manutenção para grandes áreas e comércios.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section-padding galeria-bg">
+        <div class="section-title">
+            <h2>Nossos Projetos Reais</h2>
+            <p>Confira a qualidade do nosso acabamento em vídeos e fotos</p>
+        </div>
+        
+        <div class="divisor-secao">Vídeos em Destaque</div>
+        
+        <div class="galeria-grid">
+            <div class="midia-item">
+                <video controls>
+                    <source src="img/videos/acabamento-teto.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video>
+                <div class="midia-info"><h3>Acabamento de Teto</h3></div>
+            </div>
+
+            <div class="midia-item">
+                <video controls>
+                    <source src="img/videos/video-sala.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video>
+                <div class="midia-info"><h3>Sala Decorada</h3></div>
+            </div>
+
+            <div class="midia-item">
+                <video controls>
+                    <source src="img/videos/video-teto.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video>
+                <div class="midia-info"><h3>Detalhes em Gesso</h3></div>
+            </div>
+        </div>
+
+        <div class="divisor-secao">Galeria de Fotos</div>
+        <div class="galeria-grid" id="galeria-fotos"></div>
+
+    </section>
+
+    <footer id="contato">
+        <div class="footer-content">
+            <h3>Gesso Decoracompany</h3>
+            
+            <div class="footer-info">
+                <p>📍 Av. 9 de maio, Urbis 2, Teixeira de Freitas - BA</p>
+                <p>📧 elielanchieta@hotmail.com</p>
+                <p>📞 (73) 99856-1422</p>
+            </div>
+            
+            <a href="https://wa.me/5573998561422" target="_blank" class="btn-whatsapp-footer">
+                Falar no WhatsApp Agora
+            </a>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Gesso Decoracompany. Todos os direitos reservados.</p>
+            <p style="margin-top: 5px; opacity: 0.5; font-size: 0.7rem;">Desenvolvido por Diego Batista</p>
+        </div>
+    </footer>
+
+    <script>
+        const containerFotos = document.getElementById('galeria-fotos');
+        const totalFotos = 20; // Ajuste conforme suas fotos
+
+        for (let i = 1; i <= totalFotos; i++) {
+            const divItem = document.createElement('div');
+            divItem.className = 'midia-item'; // Usa a mesma classe bonita dos vídeos
+
+            const img = document.createElement('img');
+            let numeroFormatado = i.toString().padStart(2, '0');
+            img.src = `img/videos/img${numeroFormatado}.jpeg`; // Extensão corrigida
+            img.alt = `Trabalho Gesso Decoracompany ${i}`;
+            img.loading = "lazy"; 
+            
+            // Tratamento de erro
+            img.onerror = function() {
+                divItem.style.display = 'none';
+            };
+
+            divItem.appendChild(img);
+            containerFotos.appendChild(divItem);
+        }
+
+        // Script de Rolagem Suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
