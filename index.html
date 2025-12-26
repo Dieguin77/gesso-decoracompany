@@ -3,457 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gesso Decoracompany | Acabamentos de Alto Padrão</title>
     
+    <title>Gesso Decoracompany | Drywall e Gesso em Teixeira de Freitas - BA</title>
+    <meta name="description" content="Especialista em Drywall, Gesso 3D, Sancas e Forros de alto padrão em Teixeira de Freitas. Transforme seu ambiente com a Gesso Decoracompany. Orçamento grátis!">
+    <meta name="keywords" content="gesso teixeira de freitas, drywall teixeira de freitas, gesso 3d, forro pvc, divisórias, gesso decoracompany, acabamento de luxo">
+    <meta name="author" content="Diego Batista">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gesso Decoracompany | Acabamentos de Alto Padrão">
+    <meta property="og:description" content="Especialistas em Drywall e Gesso 3D em Teixeira de Freitas e região.">
+    <meta property="og:image" content="img/videos/logo.png">
+    <meta property="og:url" content="https://www.gessodecoracompany.com.br">
+
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+
     <style>
-        /* --- 1. VARIÁVEIS E RESET (A Base do Design) --- */
-        :root {
-            --azul-brand: #004aad;
-            --azul-escuro: #002d6b;
-            --vermelho-brand: #e63946;
-            --cinza-fundo: #f8f9fa;
-            --texto-principal: #333333;
-            --texto-suave: #666666;
-            --branco: #ffffff;
-            --sombra-premium: 0 10px 30px rgba(0,0,0,0.08);
-            --borda-suave: 1px solid rgba(0,0,0,0.05);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: var(--cinza-fundo);
-            color: var(--texto-principal);
-            line-height: 1.6;
-        }
-
-        a { text-decoration: none; }
-        ul { list-style: none; }
-
-        /* --- 2. HEADER MODERNO --- */
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        .whatsapp-float {
             position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            height: 80px;
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 5%;
-        }
-
-        /* --- ESTILOS DO LOGO E TEXTO (NOVO) --- */
-        
-        /* Container que segura a imagem e o texto juntos */
-        .brand-container {
-            display: flex;
-            align-items: center;
-            gap: 12px; /* Espaço entre a imagem da logo e o texto */
-        }
-
-        .logo {
-            height: 68px; /* Ajustado para equilibrar com o texto */
-            width: auto;
-            object-fit: contain;
-            border-radius: 20px;
-        }
-
-        /* Bloco que empilha o nome e o slogan */
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        /* Estilo do nome "Decora Company" */
-        .brand-name {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--azul-escuro);
-            line-height: 1.1;
-            letter-spacing: -0.5px;
-        }
-
-        /* Estilo do slogan "Acabamentos de Alto Padrão" */
-        .brand-slogan {
-            font-size: 0.8rem;
-            color: var(--azul-brand);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Ajuste para telas menores (celulares) */
-        @media (max-width: 480px) {
-            .logo { height: 50px; }
-            .brand-name { font-size: 1rem; }
-            .brand-slogan { font-size: 0.7rem; }
-        }
-        /* --- FIM DOS ESTILOS DO LOGO --- */
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: var(--texto-principal);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--azul-brand);
-        }
-
-        .btn-orcamento {
-            background-color: var(--azul-brand);
-            color: var(--branco) !important;
-            padding: 12px 25px;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
             border-radius: 50px;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        .btn-orcamento:hover {
-            background-color: var(--azul-escuro);
-            transform: translateY(-2px);
-        }
-
-        /* --- 3. HERO SECTION (Impacto) --- */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, rgba(0,20,50,0.9), rgba(0,74,173,0.7)), url(https://i.pinimg.com/736x/e2/71/c3/e271c3d5e91204c5645ef4dafc2f6be5.jpg);
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            color: var(--branco);
-            padding: 0 20px;
-            margin-top: 0;
+            transition: transform 0.3s ease;
         }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            max-width: 700px;
-            margin: 0 auto 2.5rem auto;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--vermelho-brand);
-            color: white;
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 50px;
-            transition: 0.3s;
-            box-shadow: 0 5px 20px rgba(230, 57, 70, 0.4);
-        }
-
-        .cta-button:hover {
-            background-color: #c92a37;
-            transform: scale(1.05);
-        }
-
-        /* --- 4. SERVIÇOS (Cards Premium) --- */
-        .section-padding { padding: 6rem 5%; }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float img { width: 35px; height: 35px; }
         
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-title h2 {
-            color: var(--azul-brand);
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-        
-        .section-title p { color: var(--texto-suave); }
-
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: var(--branco);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: var(--borda-suave);
-            box-shadow: var(--sombra-premium);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-        }
-
-        .card h3 {
-            color: var(--azul-escuro);
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .card p {
-            color: var(--texto-suave);
-            font-size: 0.95rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--azul-brand);
-            opacity: 0.5;
-            transition: 0.3s;
-        }
-
-        .card:hover::before { opacity: 1; width: 6px; }
-
-        /* --- 5. GALERIA --- */
-        .galeria-bg { background-color: var(--branco); }
-
-        .galeria-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .midia-item {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--sombra-premium);
-            transition: transform 0.3s;
-            background: #000;
-        }
-
-        .midia-item:hover { transform: scale(1.02); }
-
-        .midia-item video, .midia-item img { 
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Classe para ativar o cursor de clique nas imagens */
-        .img-galeria {
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-        .img-galeria:hover {
-            opacity: 0.8;
-        }
-
-        .midia-info {
-            background: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .midia-info h3 {
-            font-size: 1rem;
-            color: var(--texto-principal);
-        }
-
-        .divisor-secao {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 3rem 0;
-            color: var(--azul-brand);
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-        }
-        
-        .divisor-secao::before, .divisor-secao::after {
-            content: "";
-            height: 1px;
-            width: 50px;
-            background: var(--azul-brand);
-            margin: 0 15px;
-            opacity: 0.5;
-        }
-
-        /* --- 6. FOOTER --- */
-        footer {
-            background-color: var(--azul-escuro);
-            color: white;
-            padding: 4rem 5% 2rem;
-            text-align: center;
-        }
-
-        .footer-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--branco);
-        }
-
-        .footer-info p {
-            margin-bottom: 10px;
-            color: rgba(255,255,255,0.8);
-        }
-
-        .btn-whatsapp-footer {
-            display: inline-flex;
-            align-items: center;
-            background-color: #25D366;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-top: 2rem;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-whatsapp-footer:hover {
-            background-color: #20bd5a;
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.5);
-        }
-
-        /* --- RESPONSIVO --- */
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.2rem; }
-            .nav-links { display: none; }
-            .navbar { justify-content: center; }
-            .section-padding { padding: 4rem 5%; }
-        }
-
-        /* --- CSS DO MODAL --- */
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 2000; 
-            padding-top: 50px; 
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-            overflow: auto; 
-            background-color: rgba(0,0,0,0.9); 
-        }
-
-        .modal-conteudo {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 800px;
-            max-height: 80vh;
-            object-fit: contain;
-            border-radius: 5px;
-            box-shadow: 0 0 20px rgba(255,255,255,0.1);
-            animation: zoom 0.6s;
-        }
-
-        @keyframes zoom {
-            from {transform:scale(0)} 
-            to {transform:scale(1)}
-        }
-
-        .fechar {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-            z-index: 2001;
-        }
-
-        .fechar:hover, .fechar:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        #legenda {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            text-align: center;
-            color: #ccc;
-            padding: 10px 0;
-            height: 150px;
-        }
-
-        @media only screen and (max-width: 700px){
-            .modal-conteudo { width: 100%; }
-        }
+        /* Prevenção de CLS (Cumulative Layout Shift) na galeria */
+        .midia-item { min-height: 200px; background: #f0f0f0; border-radius: 8px; }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Gesso Decoracompany",
+      "image": "img/videos/logo.png",
+      "url": "https://www.gessodecoracompany.com.br",
+      "telephone": "+5573998561422",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. 9 de maio, Urbis 2",
+        "addressLocality": "Teixeira de Freitas",
+        "addressRegion": "BA",
+        "addressCountry": "BR"
+      },
+      "priceRange": "$$"
+    }
+    </script>
 </head>
 <body>
+
+    <a href="https://wa.me/5573998561422" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Ícone WhatsApp">
+    </a>
 
     <header>
         <nav class="navbar">
             <div class="brand-container">
-                <img src="img/videos/logogesso.png" alt="Gesso Decoracompany" class="logo">
+                <img src="img/videos/logo.png" alt="Logo Gesso Decoracompany" class="logo">
                 <div class="brand-text">
                     <span class="brand-name">Decora Company</span>
                     <span class="brand-slogan">Acabamentos de Alto Padrão</span>
@@ -469,88 +92,97 @@
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Transforme seu Ambiente<br>com Sofisticação</h1>
-            <p>Especialistas em Drywall, Gesso 3D e Acabamentos de Alto Padrão em Teixeira de Freitas e região.</p>
-            <a href="https://wa.me/5573998561422" target="_blank" class="cta-button">
-                Solicitar Orçamento Grátis
-            </a>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Transforme seu Ambiente<br>com Sofisticação</h1>
+                <p>Especialistas em Drywall, Gesso 3D e Acabamentos de Alto Padrão em Teixeira de Freitas e região.</p>
+                <a href="https://wa.me/5573998561422" target="_blank" class="cta-button">
+                    Solicitar Orçamento Grátis
+                </a>
+            </div>
+        </section>
 
-    <section id="servicos" class="section-padding">
-        <div class="section-title">
-            <h2>Excelência em Cada Detalhe</h2>
-            <p>Conheça nossas especialidades e eleve o nível da sua obra</p>
-        </div>
-        
-        <div class="cards-container">
-            <div class="card">
-                <h3>Decoração em Gesso</h3>
-                <p>Sancas iluminadas, molduras clássicas e design de interiores moderno para valorizar sua sala ou quarto.</p>
+        <section id="servicos" class="section-padding">
+            <div class="section-title">
+                <h2>Excelência em Cada Detalhe</h2>
+                <p>Conheça nossas especialidades e eleve o nível da sua obra</p>
             </div>
-            <div class="card">
-                <h3>Parede Drywall</h3>
-                <p>Soluções rápidas, limpas e com isolamento acústico para dividir ambientes com inteligência.</p>
+            
+            <div class="cards-container">
+                <article class="card">
+                    <h3>Decoração em Gesso</h3>
+                    <p>Sancas iluminadas, molduras clássicas e design moderno para valorizar seu imóvel.</p>
+                </article>
+                <article class="card">
+                    <h3>Parede Drywall</h3>
+                    <p>Soluções rápidas, limpas e com isolamento acústico para divisão de ambientes.</p>
+                </article>
+                <article class="card">
+                    <h3>Forro Acartonado</h3>
+                    <p>Acabamento liso perfeito para projetos de iluminação embutida e climatização.</p>
+                </article>
+                <article class="card">
+                    <h3>Divisórias Naval</h3>
+                    <p>Praticidade e durabilidade para escritórios, clínicas e comércios.</p>
+                </article>
+                <article class="card">
+                    <h3>Forro PVC & Mineral</h3>
+                    <p>Opções funcionais e de fácil manutenção para grandes áreas comerciais.</p>
+                </article>
             </div>
-            <div class="card">
-                <h3>Forro Acartonado</h3>
-                <p>O acabamento liso perfeito. Ideal para projetos de iluminação embutida e ambientes climatizados.</p>
-            </div>
-            <div class="card">
-                <h3>Divisórias Naval</h3>
-                <p>Praticidade e durabilidade para escritórios, clínicas e ambientes comerciais.</p>
-            </div>
-            <div class="card">
-                <h3>Forro PVC & Mineral</h3>
-                <p>Opções econômicas, funcionais e de fácil manutenção para grandes áreas e comércios.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="galeria" class="section-padding galeria-bg">
-        <div class="section-title">
-            <h2>Nossos Projetos Reais</h2>
-            <p>Confira a qualidade do nosso acabamento em vídeos e fotos</p>
-        </div>
-        
-        <div class="divisor-secao">Vídeos em Destaque</div>
-        
-        <div class="galeria-grid">
-            <div class="midia-item">
-                <video controls>
-                    <source src="img/videos/acabamento-teto.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo.
-                </video>
-                <div class="midia-info"><h3>Acabamento de Teto</h3></div>
-            </div>
-
-            <div class="midia-item">
-                <video controls>
-                    <source src="img/videos/video-sala.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo.
-                </video>
-                <div class="midia-info"><h3>Sala Decorada</h3></div>
-            </div>
-
-            <div class="midia-item">
-                <video controls>
-                    <source src="img/videos/video-teto.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo.
-                </video>
-                <div class="midia-info"><h3>Detalhes em Gesso</h3></div>
-            </div>
+        <section id="galeria" class="section-padding galeria-bg">
+    <div class="section-title">
+        <h2>Nossos Projetos Reais</h2>
+        <p>Confira a qualidade do nosso acabamento em vídeos e fotos</p>
+    </div>
+    
+    <div class="divisor-secao">Vídeos em Destaque</div>
+    
+    <div class="galeria-grid">
+        <div class="midia-item">
+            <video controls preload="metadata" loading="lazy">
+                <source src="img/videos/img (1).mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+            <div class="midia-info"><h3>Acabamento de Teto</h3></div>
         </div>
 
-        <div class="divisor-secao">Galeria de Fotos</div>
-        <div class="galeria-grid" id="galeria-fotos"></div>
+        <div class="midia-item">
+            <video controls preload="metadata" loading="lazy">
+                <source src="img/videos/img (2).mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+            <div class="midia-info"><h3>Sala Decorada</h3></div>
+        </div>
 
-    </section>
+        <div class="midia-item">
+            <video controls preload="metadata" loading="lazy">
+                <source src="img/videos/img (3).mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+            <div class="midia-info"><h3>Detalhes em Gesso</h3></div>
+        </div>
 
-    <div id="meuModal" class="modal">
+        <div class="midia-item">
+            <video controls preload="metadata" loading="lazy">
+                <source src="img/videos/img (4).mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+            <div class="midia-info"><h3>Nosso Trabalho</h3></div>
+        </div>
+    </div>
+
+    <div class="divisor-secao">Galeria de Fotos</div>
+    <div class="galeria-grid" id="galeria-fotos"></div>
+</section></section>
+    </main>
+
+    <div id="meuModal" class="modal" aria-hidden="true">
         <span class="fechar">&times;</span>
-        <img class="modal-conteudo" id="imgExpandida">
+        <img class="modal-conteudo" id="imgExpandida" alt="Imagem ampliada">
         <div id="legenda"></div>
     </div>
 
@@ -558,11 +190,11 @@
         <div class="footer-content">
             <h3>Gesso Decoracompany</h3>
             
-            <div class="footer-info">
+            <address class="footer-info">
                 <p>📍 Av. 9 de maio, Urbis 2, Teixeira de Freitas - BA</p>
-                <p>📧 elielanchieta@hotmail.com</p>
-                <p>📞 (73) 99856-1422</p>
-            </div>
+                <p>📧 <a href="mailto:elielanchieta@hotmail.com">elielanchieta@hotmail.com</a></p>
+                <p>📞 <a href="tel:73998561422">(73) 99856-1422</a></p>
+            </address>
             
             <a href="https://wa.me/5573998561422" target="_blank" class="btn-whatsapp-footer">
                 Falar no WhatsApp Agora
@@ -577,59 +209,53 @@
 
     <script>
         const containerFotos = document.getElementById('galeria-fotos');
-        const totalFotos = 20; // Ajuste conforme suas fotos
+        const totalFotos = 51; 
 
-        // Variáveis do Modal
         const modal = document.getElementById("meuModal");
         const modalImg = document.getElementById("imgExpandida");
         const captionText = document.getElementById("legenda");
         const span = document.getElementsByClassName("fechar")[0];
 
+        // Carregamento dinâmico otimizado
         for (let i = 1; i <= totalFotos; i++) {
             const divItem = document.createElement('div');
             divItem.className = 'midia-item';
 
             const img = document.createElement('img');
-            let numeroFormatado = i.toString().padStart(2, '0');
-            img.src = `img/videos/img${numeroFormatado}.jpeg`;
-            img.alt = `Trabalho Gesso Decoracompany ${i}`;
+            img.src = `img/videos/img (${i}).jpeg`;
+            img.alt = `Trabalho de Gesso e Drywall Decoracompany foto ${i}`;
             img.loading = "lazy";
-            img.className = 'img-galeria'; // Adiciona classe para estilo
+            img.className = 'img-galeria';
 
-            // Evento de clique para abrir o modal
             img.onclick = function(){
                 modal.style.display = "block";
+                modal.setAttribute('aria-hidden', 'false');
                 modalImg.src = this.src;
                 captionText.innerHTML = this.alt;
             }
             
             img.onerror = function() {
-                divItem.style.display = 'none';
+                divItem.remove(); 
             };
 
             divItem.appendChild(img);
             containerFotos.appendChild(divItem);
         }
 
-        // Função para fechar o modal
-        span.onclick = function() { 
+        span.onclick = () => fecharModal();
+        modal.onclick = (e) => { if (e.target === modal) fecharModal(); }
+
+        function fecharModal() {
             modal.style.display = "none";
+            modal.setAttribute('aria-hidden', 'true');
         }
 
-        // Fechar clicando fora da imagem
-        modal.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        // Script de Rolagem Suave
+        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
