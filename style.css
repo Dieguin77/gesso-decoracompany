@@ -334,8 +334,30 @@
         }
 
         .footer-info p {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+        }
+
+        /* Destaque para e-mail e telefone */
+        .footer-info a {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.15rem;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+            padding: 8px 18px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.3);
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .footer-info a:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         .btn-whatsapp-footer {
@@ -362,6 +384,20 @@
             border-top: 1px solid rgba(255,255,255,0.1);
             font-size: 0.8rem;
             color: rgba(255,255,255,0.5);
+        }
+
+        /* Link do desenvolvedor */
+        .link-dev {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .link-dev:hover {
+            color: #fff;
+            border-bottom-color: #fff;
         }
 
         /* --- RESPONSIVO --- */
